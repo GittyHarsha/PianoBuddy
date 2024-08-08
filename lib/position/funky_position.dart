@@ -1,0 +1,4 @@
+enum FunkyPosition {
+  start,
+  end,
+}
