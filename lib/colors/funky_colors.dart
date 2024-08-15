@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FunkyColors {
-  static const Color PRIMARY = Color(0xff3880FF);
-  static const Color SECONDARY = Color(0xffAA66CC);
-  static const Color SUCCESS = Color(0xff10DC60);
-  static const Color INFO = Color(0xff33B5E5);
+  static const Color PRIMARY = Color(0xFF9747FF);
+  static const Color SECONDARY = Color(0xFFF4D738);
+  static const Color SUCCESS = Color(0xFF6FCF97);
+  static const Color INFO = Color(0xFF69D2E7);
   static const Color WARNING = Color(0xffFFBB33);
   static const Color DANGER = Color(0xffF04141);
   static const Color LIGHT = Color(0xffE0E0E0);

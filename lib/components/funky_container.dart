@@ -1,6 +1,6 @@
 import 'dart:ffi';
 import 'dart:math';
-
+import 'package:piano_buddy/funky.dart';
 import 'package:flutter/material.dart';
 
 class FunkyContainer extends StatelessWidget {
@@ -15,7 +15,7 @@ class FunkyContainer extends StatelessWidget {
   final double horizontalShadowOffset;
   final double verticalShadowOffset;
   final double shadowSpreadRadius;
-  double angle = 0;
+  double rotateAngle = 0;
   FunkyContainer({
     Key? key,
     required this.width,
@@ -24,17 +24,17 @@ class FunkyContainer extends StatelessWidget {
     this.shadowThickness = 1,
     this.horizontalShadowOffset = 0.0,
     this.verticalShadowOffset = 0.0,
-    this.shadowColor = Colors.black,
-    this.backgroundColor = Colors.white,
+    this.shadowColor = FunkyColors.DARK,
+    this.backgroundColor = FunkyColors.WHITE,
     this.rounded = false,
-    this.shadowSpreadRadius = 0.0,
-    this.child,
+    this.shadowSpreadRadius = 4.0,
+    this.child, required rotateAngle,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Transform.rotate(
-      angle: angle,
+      angle: rotateAngle,
       child: Container(
         width: width,
         height: height,
@@ -56,7 +56,7 @@ class FunkyContainer extends StatelessWidget {
           ],
         ),
         child: Transform.rotate(
-          angle: -angle,
+          angle: -rotateAngle,
           child: child,
         ),
       ),
